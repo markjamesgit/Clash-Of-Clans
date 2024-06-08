@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+
+:root {
+    --primary: #F1F1F1;
+    --secondary: #23120B;
+    --background: #FDB827;
+    --optional: #21209C;
+}
+
+body {
+    background-image: url(../imgs/background-logo.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {
+    background-color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    width: 90vw;
+    max-width: 80%;
+    padding: 0 5rem;
+    margin: auto;
+}
+
+.logo img {
+    height: 7.5vh;
+    width: auto; 
+}
+
+.menus {
+    display: flex;
+    gap: 4rem;
+}
+
+.menus a {
+    color: var(--background);
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: 600;
+    text-shadow: 1px 2px 5px rgba(110, 110, 110, 0.45);
+}
+
+.burger-menu {
+    display: none;
+}
+
+.burger {
+    background-color: #FDB827;
+    width: 2.5vw;
+    height: 0.8vh;
+}
+
+/* For Desktops and Laptops */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    nav {
+        padding: 2rem;
+        height: 8vh;
+        width: 95vw;
+        max-width: 90%;
+    }
+    .menus {
+        gap: 2rem;
+    }
+    .menus a {
+        font-size: 1.1em;
+    }
+    .logo img {
+        height: 6vh;
+    }
+    .burger {
+        width: 3vw;
+        height: 1vh;
+    }
+}
+
+/* For Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    nav {
+        padding: 1rem;
+        height: 8vh;
+    }
+    .menus {
+        gap: 1rem;
+    }
+    .menus a {
+        font-size: 0.8em;
+    }
+    .logo img {
+        height: 6vh;
+        width: auto;
+    }
+}
+
+/* For Mobile Phones */
+@media (max-width: 480px) {
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    nav {
+        padding: 0.5rem;
+        height: 8vh;
+        width: 100vw;
+        max-width: 100%;
+    }
+    .menus {
+        display: none;
+        flex-direction: column;
+        background-color: var(--secondary);
+        width: 100%; 
+        position: absolute; 
+        top: 7vh; 
+        left: 0;
+        padding: 0.8rem; 
+        gap: 0.5rem;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .logo img {
+        height: 5vh;
+        width: auto;
+    }
+    .menus a {
+        font-size: 0.5em;
+    }
+    .burger {
+        background-color: #FDB827;
+        width: 10vw;
+        height: 0.6vh;
+    }
+}
+
+/* Show menu when burger menu is clicked */
+.menus.show {
+    display: flex;
+}
