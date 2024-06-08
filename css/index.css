@@ -79,8 +79,9 @@ nav {
 }
 
 .content {
+    border: 1px solid red;
     display: flex;
-    padding: 2rem 1rem;
+    padding: 6rem 5rem;
     gap: 1rem;
 }
 
@@ -114,6 +115,15 @@ nav {
     font-size: 1.3em;
     color: #fff;
     cursor: pointer;
+}
+
+.developer{
+    border: 1px solid red;
+}
+
+.developer img{
+    width: 70vw;
+    height: auto;
 }
 
 /* For Desktops and Laptops */
@@ -257,11 +267,13 @@ nav {
     }
     
     .text-content h2{
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     .text-content p{
-        font-size: 1em;
+        font-size: 0.7em;
+        margin-top: 1rem;
+        line-height: 1rem;
     }
     
     .buttons{
